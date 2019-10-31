@@ -56,7 +56,7 @@ class SellAll extends PluginBase{
         return $str;
     }
 
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(!($sender instanceof Player) && !(isset($args[0]) && $args[0] === "reload")){
             $sender->sendMessage(TextFormat::colorize("&cPlease execute this command in-game"));
             return true;
